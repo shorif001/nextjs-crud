@@ -15,6 +15,12 @@
 
 import nc from "next-connect";
 
+const users = [
+  { name: 'shorif', email: "test@test.com", phone: 123456 },
+  { name: 'shipon', email: "shipon@test.com", phone: 321321321 },
+  { name: 'ahmed', email: "ahmed@test.com", phone: 654654 },
+]
+
 const handler = nc({
   onError: (err, req, res, next) => {
     console.error(err.stack);
@@ -24,15 +30,15 @@ const handler = nc({
     res.status(404).end("Page is not found");
   },
 })
- 
+
   .get((req, res) => {
-    res.send("Hello world");
+    res.send(users);
   })
   .post((req, res) => {
-     const {name} = req.body
-     res.send(name);
+    const { name } = req.body
+    res.send(name);
   })
- 
- 
+
+
 
 export default handler;
