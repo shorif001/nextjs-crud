@@ -33,9 +33,9 @@ const Index = ({ users }) => {
                   <td>{user.email}</td>
                   <td>{user.phone}</td>
                   <td>
-                    <button onClick={()=>{router.push(`/users/${user.id}`)}} className='btn btn-primary'>View</button> |
-                    <button className='btn btn-warning'>Edit</button> | 
-                    <button className='btn btn-danger'>Delete</button>
+                    <button onClick={()=>{router.push(`/users/${user.id}`)}} className='btn btn-primary'>View</button> | 
+                    <button className='btn btn-warning'> Edit</button> |  
+                    <button className='btn btn-danger'> Delete</button>
                   </td>
                 </tr>
               ))
